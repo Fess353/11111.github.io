@@ -9,6 +9,20 @@ color: #070707;
 
 }
 
+.ham {
+position: relative;
+left: 300px;
+top: 30px;
+display: none;
+box-shadow: 2px 2px 15px 4px #678b8b71;
+
+    :hover {
+        transform: scale(1.1) translateY(3px);
+        transition: 1s ease-out;
+           
+    }
+}
+
 .section_header {
     font-family: Gilroy-Bold;
     font-size: 34px;
@@ -101,8 +115,19 @@ margin-right: auto;
 
 .photo {
     margin-top: 30px;
-   
-    border: slategrey solid 2px;
+    
+
+    img {
+  
+border: slategrey solid 2px;
+    }
+
+    img:hover {
+        border: solid 1px #4e4545;
+        transition: ease-in-out 1s;
+        filter: contrast(1.1) brightness(1.1); 
+        transform: scale(1.02);
+    }
 }
 
 .about_me {
@@ -155,11 +180,13 @@ p {
     background-image: linear-gradient(to bottom right, #0eede9, #023da3);
    width: 80px;
    padding: 5px;
+   border-radius: 5%;
    
 }
 
 .img_container:hover {
     filter: sepia(0.1) hue-rotate(10deg) brightness(1.1) drop-shadow(2px 2px 4px #333);
+    transition: ease-in-out 0.3s;
  
 }
 
@@ -173,6 +200,7 @@ p {
 
 .soft_names div:hover {
     filter: sepia(0.1) hue-rotate(10deg) brightness(1.1) drop-shadow(2px 2px 4px #333);
+    transition: ease-in-out 0.5s;
 }
 
 .full {
@@ -181,7 +209,8 @@ p {
 }
 
 .full:hover {
-    transform: scale(1.1) rotate(10deg)
+    transform: scale(1.1) rotate(10deg);
+    transition: ease-in-out 0.5s;
 }
 
 .soft_stars {
@@ -192,12 +221,6 @@ p {
     margin-bottom: 30px;
 }
 
-.photo img:hover {
-    border: solid 1px #4e4545;
-    transition: ease-in-out 2s;
-    filter: contrast(1.1) brightness(1.1); 
-    transform: translate(4px, 2px);
-}
 
 .skill_container {
     padding-bottom: 30px;
@@ -225,8 +248,9 @@ border-bottom: none;
     }
 
     img:hover {
-        filter: contrast(1.1) brightness(1.1) sepia(0.1); 
+        filter: contrast(1.1) brightness(1.1) sepia(0.1) drop-shadow(2px 2px 4px #333); 
         transform: translate(4px, 2px);
+        transition: ease-in-out 0.5s;
     }
 
     span {
@@ -237,4 +261,37 @@ border-bottom: none;
 
 .name {
     font-size: 2rem !important;
+    font-weight: 550;
 }
+
+.hidden {
+    display: none;
+}
+
+@media all and (max-width: 577px) {
+   
+
+    .ham {
+        display: block;
+        padding: 5px;
+        background-color:  #b8b2b257;
+        width: 120px;
+        border-radius: 20%;
+        transform: translate(10px, -30px);
+    }
+
+}
+
+@media all and (min-width: 577px) {
+   
+
+    .ham {
+        display: block;
+        padding: 5px;
+        background-color:  #ffffff57;
+        width: 120px;
+        border-radius: 20%;
+        transform: translate(-330px, -50px) scale(0.5);
+    }
+    }
+    

@@ -8,6 +8,22 @@
   color: #070707;
 }
 
+.ham {
+  position: relative;
+  left: 300px;
+  top: 30px;
+  display: none;
+  -webkit-box-shadow: 2px 2px 15px 4px #678b8b71;
+          box-shadow: 2px 2px 15px 4px #678b8b71;
+}
+
+.ham :hover {
+  -webkit-transform: scale(1.1) translateY(3px);
+          transform: scale(1.1) translateY(3px);
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
 .section_header {
   font-family: Gilroy-Bold;
   font-size: 34px;
@@ -108,7 +124,20 @@ ul li {
 
 .photo {
   margin-top: 30px;
+}
+
+.photo img {
   border: slategrey solid 2px;
+}
+
+.photo img:hover {
+  border: solid 1px #4e4545;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+  -webkit-filter: contrast(1.1) brightness(1.1);
+          filter: contrast(1.1) brightness(1.1);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .about_me {
@@ -166,11 +195,14 @@ p {
   background-image: linear-gradient(to bottom right, #0eede9, #023da3);
   width: 80px;
   padding: 5px;
+  border-radius: 5%;
 }
 
 .img_container:hover {
   -webkit-filter: sepia(0.1) hue-rotate(10deg) brightness(1.1) drop-shadow(2px 2px 4px #333);
           filter: sepia(0.1) hue-rotate(10deg) brightness(1.1) drop-shadow(2px 2px 4px #333);
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
 }
 
 .soft_names {
@@ -187,6 +219,8 @@ p {
 .soft_names div:hover {
   -webkit-filter: sepia(0.1) hue-rotate(10deg) brightness(1.1) drop-shadow(2px 2px 4px #333);
           filter: sepia(0.1) hue-rotate(10deg) brightness(1.1) drop-shadow(2px 2px 4px #333);
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
 }
 
 .full {
@@ -198,6 +232,8 @@ p {
 .full:hover {
   -webkit-transform: scale(1.1) rotate(10deg);
           transform: scale(1.1) rotate(10deg);
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
 }
 
 .soft_stars {
@@ -209,16 +245,6 @@ p {
   padding-top: 0.4em;
   padding-bottom: 15px;
   margin-bottom: 30px;
-}
-
-.photo img:hover {
-  border: solid 1px #4e4545;
-  -webkit-transition: ease-in-out 2s;
-  transition: ease-in-out 2s;
-  -webkit-filter: contrast(1.1) brightness(1.1);
-          filter: contrast(1.1) brightness(1.1);
-  -webkit-transform: translate(4px, 2px);
-          transform: translate(4px, 2px);
 }
 
 .skill_container {
@@ -257,10 +283,12 @@ p {
 }
 
 .portfolio_item img:hover {
-  -webkit-filter: contrast(1.1) brightness(1.1) sepia(0.1);
-          filter: contrast(1.1) brightness(1.1) sepia(0.1);
+  -webkit-filter: contrast(1.1) brightness(1.1) sepia(0.1) drop-shadow(2px 2px 4px #333);
+          filter: contrast(1.1) brightness(1.1) sepia(0.1) drop-shadow(2px 2px 4px #333);
   -webkit-transform: translate(4px, 2px);
           transform: translate(4px, 2px);
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
 }
 
 .portfolio_item span {
@@ -270,5 +298,34 @@ p {
 
 .name {
   font-size: 2rem !important;
+  font-weight: 550;
+}
+
+.hidden {
+  display: none;
+}
+
+@media all and (max-width: 577px) {
+  .ham {
+    display: block;
+    padding: 5px;
+    background-color: #b8b2b257;
+    width: 120px;
+    border-radius: 20%;
+    -webkit-transform: translate(10px, -30px);
+            transform: translate(10px, -30px);
+  }
+}
+
+@media all and (min-width: 577px) {
+  .ham {
+    display: block;
+    padding: 5px;
+    background-color: #ffffff57;
+    width: 120px;
+    border-radius: 20%;
+    -webkit-transform: translate(-330px, -50px) scale(0.5);
+            transform: translate(-330px, -50px) scale(0.5);
+  }
 }
 /*# sourceMappingURL=style.css.map */
