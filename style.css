@@ -330,6 +330,16 @@ p {
   visibility: hidden;
 }
 
+.display_none {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-filter: opacity(0);
+          filter: opacity(0);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  display: none !important;
+}
+
 @media all and (max-width: 720px) {
   .navigation_menu {
     position: relative;

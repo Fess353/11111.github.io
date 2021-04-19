@@ -276,6 +276,14 @@ p {
   visibility: hidden;
   }
 
+.display_none {
+  transition-delay: 1s;
+  filter: opacity(0);
+  transition-duration: 1s;
+  display: none !important;
+  
+}
+
 @media all and (max-width: 720px) {
       .ham {
              
