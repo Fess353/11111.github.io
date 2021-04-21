@@ -70,6 +70,8 @@ ul {
   margin-right: auto;
   -webkit-filter: drop-shadow(2px 2px 5px #5e454586) contrast(0.7);
           filter: drop-shadow(2px 2px 5px #5e454586) contrast(0.7);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .name:hover {
@@ -129,6 +131,8 @@ ul {
   border-bottom: 1px solid #828282;
   margin-bottom: 1rem;
   background-color: #ffffff;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .navigation_menu button {
@@ -154,6 +158,8 @@ ul {
 
 .photo img {
   border: slategrey solid 2px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .photo img:hover {
@@ -172,9 +178,8 @@ ul {
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  /* Black */
   color: #070707;
-  padding-top: 100px;
+  padding-top: 70px;
   padding-bottom: 107px;
   height: auto;
 }
@@ -240,6 +245,8 @@ p {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding-top: 0.4em;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .soft_names div:hover {
@@ -271,6 +278,8 @@ p {
   padding-top: 0.4em;
   padding-bottom: 15px;
   margin-bottom: 30px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .skill_container {
@@ -340,7 +349,95 @@ p {
   display: none !important;
 }
 
+.contacts_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 5px;
+  border-bottom: 1px solid rgba(104, 203, 227, 0.747);
+}
+
+a {
+  text-decoration: none;
+  color: #2c5bac;
+}
+
+a:active {
+  color: rgba(104, 203, 227, 0.747);
+}
+
+.contact {
+  position: relative;
+  top: 20px;
+  padding: 10px;
+  padding-bottom: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #023da3;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background: url("/img/social-media-icons-css-sprite.png") no-repeat;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.contact-vk .contact-icon {
+  background-position: -339px -60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: drop-shadow(2px 2px 5px #5e454586);
+          filter: drop-shadow(2px 2px 5px #5e454586);
+}
+
+.contact-email .contact-icon {
+  background-position: -226px -60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-phone .contact-icon {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(/img/phone-icon-vector-blue.png);
+  background-size: contain;
+  text-align: center;
+}
+
+.rights {
+  text-align: end;
+  padding: 15px;
+  color: rgba(67, 159, 182, 0.747);
+}
+
 @media all and (max-width: 720px) {
+  .contacts_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .navigation_menu {
     position: relative;
   }
@@ -367,18 +464,17 @@ p {
     width: 200px;
   }
   .name {
-    margin-top: 100px;
+    margin-top: 60px;
   }
   .lang_switcher {
     position: absolute;
-    left: 20px;
-    top: 160px;
+    left: 10px;
+    top: 250px;
     margin-right: 10px;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
     width: auto;
     padding-top: 0px;
-    margin-top: 15px;
+    -webkit-transition: 1s;
+    transition: 1s;
   }
 }
 
